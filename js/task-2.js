@@ -27,22 +27,7 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
-const gallery = document.querySelector('.gallery');
 
-// Создаем фрагмент для добавления всех изображений за одну операцию
-const fragment = document.createDocumentFragment();
-
-// Проходимся по каждому объекту в массиве и создаем элементы img и li
-images.forEach(image => {
-  const li = document.createElement('li');
-  const img = document.createElement('img');
-  img.src = image.url;
-  img.alt = image.alt;
-  li.appendChild(img);
-  fragment.appendChild(li);
-});
-
-Math(1 + 5
-)
-BruhJustMath(1 + 1
-)
+const gallery = document.querySelector(".gallery");
+const markup = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width="360"></li>`).join('');
+gallery.innerHTML = markup
